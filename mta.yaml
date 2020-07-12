@@ -1,0 +1,16 @@
+ID: HANA_GIT
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: HDB_GIT
+   type: hdb
+   path: HDB_GIT
+   requires:
+    - name: hdi_HDB_GIT
+
+resources:
+ - name: hdi_HDB_GIT
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
